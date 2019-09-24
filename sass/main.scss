@@ -1,43 +1,30 @@
-$font-color: #111;
-$main-font: pf-highway-sans-pro;
-$back-color: #fff;
+$font-color: #3c4857;;
+$main-font: Arial;
+$back-color: #0c69c9;
 
-@include font-face($main-font, regular, normal);
-@include font-face(pragmatica, regular, normal);
+@include font-face(roboto, regular, normal);
+@include font-face(roboto, bold, bold);
+@include font-face(rotonda, bold, bold);
 @import "normalize";
 
-* {
+html {
   box-sizing: border-box;
 }
 
-html {
-  @include media('tablet-small') {
-    font-size: 20px;
-  }
+*, *::before, *::after { box-sizing: inherit; }
+
+a {
+  text-decoration: none
 }
 
 body {
+  margin: 0;
   font-family: $main-font, sans-serif;
   font-weight: normal;
   color: $font-color;
   background: $back-color;
 }
 
-h1,
-p {
-  margin: 0;
-}
-
-h1 {
-  font-weight: normal;
-}
-
 img {
-  vertical-align: bottom;
-}
-
-button {
-  outline: none;
-  margin: 0;
-  border: 0;
+  max-width: 100%
 }
