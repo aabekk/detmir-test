@@ -39,6 +39,10 @@
     "node-normalize-scss": "^8.0.1"
   },
   "dependencies": {
+    "browserslist": "^4.7.0",
     "node-pre-gyp": "^0.13.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
