@@ -55,9 +55,10 @@ function svg() {
         // remove all fill, style and stroke declarations in out shapes
         .pipe(cheerio({
             run: function ($) {
-                $('[fill]').removeAttr('fill');
-                $('[stroke]').removeAttr('stroke');
-                $('[style]').removeAttr('style');
+                $('[fill="#000"]').removeAttr('fill');
+                $('[fill="#000000"]').removeAttr('fill');
+                $('[fill="#fff"]').removeAttr('fill');
+                $('[fill="#ffffff"]').removeAttr('fill');
             },
             parserOptions: {xmlMode: true}
         }))
