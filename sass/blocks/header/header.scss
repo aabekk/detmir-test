@@ -1,0 +1,9 @@
+$back-color: #0d70d6;
+$box-shadow: 0 10px 28px rgba(8, 70, 133, 0.28);
+.header {
+  padding: 18px 7.1% 17px;
+  background-color: $back-color;
+  box-shadow: $box-shadow;
+  position: sticky;
+  top: 0;
+}
