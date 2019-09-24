@@ -2,13 +2,15 @@
   display: none;
 
   &:checked ~ {
-
     .nav {
-      &__box {
+      align-items: flex-start;
+      &__list {
         height: 100%;
-        transition-delay: 0s;
+        align-self: flex-start;
+        .nav__item {
+          margin-bottom: 20px;
+        }
       }
-
       &__btn {
         .nav__icon {
           background: transparent;

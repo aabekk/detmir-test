@@ -35,22 +35,6 @@
 			<label class="nav__btn" for="toggle">
 				<span class="nav__icon"></span>
 			</label>
-			<div class="nav__box">
-				<ul class="nav__list">
-					<li class="nav__item">
-						<a href="#" class="nav__link">Профиль</a>
-					</li>
-					<li class="nav__item">
-						<a href="#" class="nav__link">Бонусная карта</a>
-					</li>
-					<li class="nav__item">
-						<a href="" class="nav__link">Избранное</a>
-					</li>
-					<li class="nav__item">
-						<a href="#" class="nav__link">Контакты</a>
-					</li>
-				</ul>
-			</div>
 			<div class="logo">
 				<svg class="logo__cubes">
 					<use xlink:href="img/svg/symbol/sprite.svg#cubes"></use>
@@ -59,9 +43,32 @@
 					<use xlink:href="img/svg/symbol/sprite.svg#logo"></use>
 				</svg>
 			</div>
-			<svg class="basket">
-				<use xlink:href="img/svg/symbol/sprite.svg#basket"></use>
-			</svg>
+			<ul class="nav__list">
+				<li class="nav__item">
+					<a class="nav__link" aria-label="Корзина">
+<!--							<span class="nav__text">Корзина</span>-->
+						<svg class="nav__img basket">
+							<use xlink:href="img/svg/symbol/sprite.svg#basket"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link nav__link_none" aria-label="Избранное">
+<!--							<span class="nav__text">Избранное</span>-->
+						<svg class="nav__img like">
+							<use xlink:href="img/svg/symbol/sprite.svg#like"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link nav__link_none" aria-label="Профиль">
+<!--							<span class="nav__text">Профиль</span>-->
+						<svg class="nav__img user">
+							<use xlink:href="img/svg/symbol/sprite.svg#user"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
 		</nav>
 	</header>
 	<main class="container">
@@ -72,17 +79,17 @@
 </html>
 <!-- <picture>
     <source type="image/webp" media="(min-width: 1440px)"
-    		srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+    		srcset="__img/logo-desktop-white@1x.webp 1x, __img/logo-desktop-white@2x.webp 2x">
     <source type="image/webp" media="(min-width: 768px)"
-    		srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+    		srcset="__img/logo-tablet-white@1x.webp 1x, __img/logo-tablet-white@2x.webp 2x">
     <source type="image/webp"
-    		srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+    		srcset="__img/logo-mobile-white@1x.webp 1x, __img/logo-mobile-white@2x.webp 2x">
     <source media="(min-width: 1440px)"
-    		srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+    		srcset="__img/logo-desktop-white@1x.png 1x, __img/logo-desktop-white@2x.png 2x">
     <source media="(min-width: 768px)"
-			srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-    <img class="header__logo-image" src="img/logo-mobile-white@1x.png"
-    	 srcset="img/logo-mobile-white@2x.png 2x"
+			srcset="__img/logo-tablet-white@1x.png 1x, __img/logo-tablet-white@2x.png 2x">
+    <__img class="header__logo-image" src="__img/logo-mobile-white@1x.png"
+    	 srcset="__img/logo-mobile-white@2x.png 2x"
     	 width="100" height="19"
     	 alt="Логотип приложения Погнали?">
 </picture> -->

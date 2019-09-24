@@ -41,7 +41,7 @@ function html() {
 function img() {
     return src(images, {nodir: true})
         .pipe(tinify(API_KEY_TINIFY))
-        .pipe(dest('dist/img/'))
+        .pipe(dest('dist/__img/'))
 }
 
 function svg() {
@@ -52,16 +52,6 @@ function svg() {
                 pretty: true
             }
         }))
-        // remove all fill, style and stroke declarations in out shapes
-        .pipe(cheerio({
-            run: function ($) {
-                $('[fill]').removeAttr('fill');
-                $('[stroke]').removeAttr('stroke');
-                $('[style]').removeAttr('style');
-            },
-            parserOptions: {xmlMode: true}
-        }))
-        // cheerio plugin create unnecessary string '&gt;', so replace it.
         .pipe(replace('&gt;', '>'))
         // build svg sprite
         .pipe(svgSprite({

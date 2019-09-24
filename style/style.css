@@ -425,12 +425,6 @@ img {
   max-width: 100%;
 }
 
-.basket {
-  width: 25px;
-  height: 22px;
-  fill: #fff;
-}
-
 .header {
   padding: 18px 7.1% 17px;
   background-color: #0d70d6;
@@ -464,6 +458,21 @@ img {
   align-items: center;
 }
 
+.basket {
+  width: 25px;
+  height: 22px;
+}
+
+.like {
+  width: 20px;
+  height: 18px;
+}
+
+.user {
+  width: 21px;
+  height: 23px;
+}
+
 .logo__cubes {
   width: 62px;
   height: 14px;
@@ -474,31 +483,6 @@ img {
   height: 17px;
   width: 100%;
   fill: #fff;
-}
-
-.nav__box {
-  position: fixed;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  top: 70px;
-  left: 0;
-  right: 0;
-  height: 0;
-  opacity: 1;
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transition-delay: .2s;
-  transition-delay: .2s;
-  overflow: hidden;
-  background-color: #00bf5a;
 }
 
 .nav__btn {
@@ -513,10 +497,20 @@ img {
   display: none;
 }
 
-.nav__check:checked ~ .nav__box {
+.nav__check:checked ~ .nav {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.nav__check:checked ~ .nav__list {
   height: 100%;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.nav__check:checked ~ .nav__list .nav__item {
+  margin-bottom: 20px;
 }
 
 .nav__check:checked ~ .nav__btn .nav__icon {
@@ -570,21 +564,44 @@ img {
   top: 8px;
 }
 
+.nav__img {
+  fill: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .nav__item {
-  font-size: 26px;
-  padding-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .nav__link {
   color: #fff;
+  display: block;
 }
 
 .nav__list {
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transition-delay: .5s;
-  transition-delay: .5s;
   list-style: none;
   padding-left: 0;
-  margin-top: -50px;
+  overflow: hidden;
+  margin: 0;
+  height: 22px;
+}
+
+.nav__text {
+  font-size: 0;
 }

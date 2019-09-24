@@ -1,4 +1,7 @@
-.nav__item {
+$fill: #fff;
+
+.nav__img {
+  fill: $fill;
   display: flex;
   justify-content: center;
   align-items: center;
