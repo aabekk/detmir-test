@@ -1,4 +1,4 @@
-const { src, dest, parallel } = require( 'gulp' ),
+const { src, dest, parallel, watch } = require( 'gulp' ),
     autoprefixer = require ('gulp-autoprefixer'),
     concat = require( 'gulp-concat' ),
     cssMin = require('gulp-csso'),
@@ -13,18 +13,15 @@ const { src, dest, parallel } = require( 'gulp' ),
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace'),
-
     API_KEY_TINIFY = env('../api/.env').tinify,
     views= ['index.html'],
-    styles = ['sass/mixins/*.scss', 'sass/**/*.scss'],
-    images = ['img/**/*'];
+    styles = ['sass/mixins/*.scss', 'sass/**/*.scss'];
 
 function css() {
     return src( styles )
         .pipe( concat( 'style.scss'))
         .pipe( sass({includePaths: normalize.includePaths}))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions, Firefox ESR, not dead, not OperaMini all'],
             cascade: false,
         }))
         .pipe(gcmq())
@@ -32,8 +29,7 @@ function css() {
         .pipe(cssMin())
         .pipe(rename({suffix: '.min'}))
         .pipe(dest('dist/style/'))
-        .pipe(dest('style/'))
-
+        .pipe(dest('style/'));
 }
 
 function html() {
@@ -49,7 +45,7 @@ function img() {
 }
 
 function svg() {
-    return gulp.src('img/svg/*.svg')
+    return src('img/svg/**/*.svg')
     // minify svg
         .pipe(svgmin({
             js2svg: {
@@ -71,25 +67,29 @@ function svg() {
         .pipe(svgSprite({
             mode: {
                 symbol: {
-                    sprite: "../mixins/sprite.svg",
-                    render: {
-                        scss: {
-                            dest:'../../../sass/_sprite.scss',
-                            template: "../sass/_sprite-template.scss"
-                        }
-                    }
+                    sprite: "sprite.svg",
+                    render: {}
                 }
             }
         }))
-        .pipe(gulp.dest('img/svg/'));
+        .pipe(dest('img/svg/'))
+        .pipe(dest('dist/img/svg/'));
 }
 
 function build() {
     return src('fonts/**/*')
         .pipe(dest('dist/fonts/'))
 }
+
+function watcher (cb) {
+    watch(styles, css);
+    cb();
+}
+
 exports.html = html;
 exports.css = css;
 exports.img = img;
+exports.svg = svg;
+exports.watcher = watcher;
 exports.build = build;
 exports.default = parallel(html, css, build);
