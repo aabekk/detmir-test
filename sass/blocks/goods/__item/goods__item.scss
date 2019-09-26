@@ -1,7 +1,10 @@
 $back-color: #fff;
+$border-color: #e8ecf1;
+
 .goods__item {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  border-bottom: 1px solid $border-color;
+  padding: 3.4% 4.8% 6.6% 3.6%;
 }
