@@ -1,0 +1,13 @@
+.btn-stick_delete {
+  border: 0;
+  padding: 0;
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
