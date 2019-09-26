@@ -425,8 +425,72 @@ img {
   max-width: 100%;
 }
 
+.btn-cross {
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.btn-cross::before,
+.btn-cross::after {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  content: '';
+  border-radius: 2px;
+  background-color: #e0e6ed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.btn-cross::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.btn-cross::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.btn-like {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.btn-quantity {
+  width: 39px;
+  background-color: transparent;
+  position: relative;
+}
+
+.btn-quantity::before,
+.btn-quantity::after {
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  content: '';
+  border-radius: 2px;
+  background-color: #e0e6ed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.container {
+  padding: 7.6% 3%;
+}
+
 .header {
-  padding: 18px 7.1% 17px;
+  padding: 5.4% 7.1% 5%;
   background-color: #0d70d6;
   -webkit-box-shadow: 0 10px 28px rgba(8, 70, 133, 0.28);
   box-shadow: 0 10px 28px rgba(8, 70, 133, 0.28);
@@ -435,8 +499,31 @@ img {
   top: 0;
 }
 
+.goods {
+  -webkit-box-shadow: 0 2px 4px rgba(9, 57, 116, 0.2);
+  box-shadow: 0 2px 4px rgba(9, 57, 116, 0.2);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 3.5%;
+}
+
+.img-basket {
+  width: 25px;
+  height: 22px;
+}
+
+.img-like {
+  width: 20px;
+  height: 18px;
+}
+
+.img-user {
+  width: 21px;
+  height: 23px;
+}
+
 .logo {
-  width: 93px;
+  width: 36%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,6 +531,14 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.quantity {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 60px;
 }
 
 .nav {
@@ -458,25 +553,117 @@ img {
   align-items: center;
 }
 
-.basket {
-  width: 25px;
-  height: 22px;
+.btn-quantity_down {
+  border-top: 1px solid #e0e6ed;
+  border-bottom: 1px solid #e0e6ed;
+  border-left: none;
+  border-right: none;
 }
 
-.like {
-  width: 20px;
-  height: 18px;
+.basket__title {
+  color: #fff;
+  font-family: "Rotonda", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1%;
 }
 
-.user {
-  width: 21px;
-  height: 23px;
+.btn-quantity_up {
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #e0e6ed;
+}
+
+.btn-quantity_up::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.goods__box {
+  width: 51%;
+  margin-left: 10px;
+}
+
+.goods__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 75px;
+}
+
+.goods__img-like {
+  fill: #f04550;
+}
+
+.goods__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.goods__link {
+  color: #3c4857;
+}
+
+.goods__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.goods__price {
+  font-family: "Rotonda", "Arial", sans-serif;
+  font-size: .8125rem;
+  font-weight: bold;
+}
+
+.goods__title {
+  font-size: .9375rem;
+  position: relative;
+  margin: 0 0 6px;
+  font-weight: normal;
+}
+
+.goods__title::before {
+  content: '';
+  position: absolute;
+  width: 59px;
+  height: 29px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffffff), color-stop(78%, rgba(255, 255, 255, 0.49)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.49) 78%, rgba(255, 255, 255, 0) 100%);
+  right: 0;
+}
+
+.goods__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .logo__cubes {
-  width: 62px;
+  width: 71%;
   height: 14px;
-  margin: 0 auto 4px;
+  margin: 0 auto 5%;
 }
 
 .logo__text {
@@ -485,12 +672,35 @@ img {
   fill: #fff;
 }
 
+.quantity__input {
+  -moz-appearance: textfield;
+  width: 41px;
+  -webkit-box-shadow: inset 0 2px 2px rgba(123, 123, 123, 0.1);
+  box-shadow: inset 0 2px 2px rgba(123, 123, 123, 0.1);
+  border-radius: 4px 0 0 4px;
+  background-color: #ecf1f8;
+  border: none;
+  text-align: center;
+  color: #3c4857;
+  font-size: .9375rem;
+}
+
+.quantity__input::-webkit-inner-spin-button,
+.quantity__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 .nav__btn {
   display: block;
   width: 22px;
   height: 20px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .nav__check {
@@ -538,8 +748,10 @@ img {
   border-radius: 24px;
   background: #fff;
   height: 3px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
   top: 8px;
 }
 
@@ -552,8 +764,10 @@ img {
   background: #fff;
   width: 100%;
   height: 3px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .nav__icon::before {
@@ -604,4 +818,11 @@ img {
 
 .nav__text {
   font-size: 0;
+  display: none;
+}
+
+.goods__price_total {
+  font-size: .9375rem;
+  font-weight: 700;
+  margin-left: auto;
 }
