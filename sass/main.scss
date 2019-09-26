@@ -1,4 +1,4 @@
-$font-color: #3c4857;;
+$main-font-color: #3c4857;
 $main-font: Arial;
 $back-color: #0c69c9;
 
@@ -21,7 +21,7 @@ body {
   margin: 0;
   font-family: $main-font, sans-serif;
   font-weight: normal;
-  color: $font-color;
+  color: $main-font-color;
   background: $back-color;
 }
 
