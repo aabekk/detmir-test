@@ -1,0 +1,18 @@
+$border-color: #e0e6ed;
+$back-color: transparent;
+$height: 2px;
+.btn-quantity {
+  width: 39px;
+  background-color: $back-color;
+  position: relative;
+  &::before, &::after {
+    width: 15px;
+    height: $height;
+    position: absolute;
+    content: '';
+    border-radius: $height;
+    background-color: $border-color;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+  }
+}
