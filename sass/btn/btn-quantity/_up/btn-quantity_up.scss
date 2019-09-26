@@ -1,0 +1,9 @@
+$border-color: #e0e6ed;
+
+.btn-quantity_up {
+  border-radius: 0 4px 4px 0;
+  border: 1px solid $border-color;
+  &::after {
+    transform: rotate(90deg);
+  }
+}
