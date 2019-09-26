@@ -1,14 +1,7 @@
 .goods__title {
   font-size: .9375rem;
   position: relative;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   font-weight: normal;
-  &::before {
-    content: '';
-    position: absolute;
-    width: 59px;
-    height: 29px;
-    background-image: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.49) 78%, rgba(255, 255, 255, 0) 100%);
-    right: 0;
-  }
+  line-height: 1.25rem;
 }
