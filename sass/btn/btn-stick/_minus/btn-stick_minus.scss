@@ -1,0 +1,11 @@
+.btn-stick_minus {
+  border-left: none;
+  border-right: none;
+  width: 38px;
+  &::before {
+    width: 14px;
+  }
+  &::after {
+    content: none;
+  }
+}
