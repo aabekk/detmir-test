@@ -1,0 +1,11 @@
+.btn-stick_plus {
+  &::before, &::after {
+    width: 16px;
+  }
+  &::before {
+    transform: rotate(90deg);
+  }
+  ::after {
+    transform: rotate(0deg);
+  }
+}
