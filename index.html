@@ -46,24 +46,24 @@
 			<ul class="nav__list">
 				<li class="nav__item">
 					<a class="nav__link" aria-label="Корзина">
-<!--							<span class="nav__text">Корзина</span>-->
-						<svg class="nav__img basket">
+						<span class="nav__text">Корзина</span>
+						<svg class="nav__img img-basket">
 							<use xlink:href="img/svg/symbol/sprite.svg#basket"></use>
 						</svg>
 					</a>
 				</li>
 				<li class="nav__item">
-					<a href="#" class="nav__link nav__link_none" aria-label="Избранное">
-<!--							<span class="nav__text">Избранное</span>-->
-						<svg class="nav__img like">
+					<a href="#" class="nav__link" aria-label="Избранное">
+						<span class="nav__text">Избранное</span>
+						<svg class="nav__img img-like">
 							<use xlink:href="img/svg/symbol/sprite.svg#like"></use>
 						</svg>
 					</a>
 				</li>
 				<li class="nav__item">
-					<a href="#" class="nav__link nav__link_none" aria-label="Профиль">
-<!--							<span class="nav__text">Профиль</span>-->
-						<svg class="nav__img user">
+					<a href="#" class="nav__link" aria-label="Профиль">
+						<span class="nav__text">Профиль</span>
+						<svg class="nav__img img-user">
 							<use xlink:href="img/svg/symbol/sprite.svg#user"></use>
 						</svg>
 					</a>
@@ -72,7 +72,86 @@
 		</nav>
 	</header>
 	<main class="container">
-
+		<section class="basket">
+			<h1 class="basket__title">Корзина</h1>
+			<div class="goods">
+				<ul class="goods__list">
+					<li class="goods__item">
+						<picture>
+							<source type="image/webp" media="(min-width: 768px)"
+									srcset="img/goods/1-tablet-@1x.webp 1x, img/goods/1-tablet-@2x.webp 2x">
+							<source type="image/webp"
+									srcset="img/goods/1-mobile-@1x.webp 1x, img/goods/1-mobile-@2x.webp 2x">
+							<source media="(min-width: 768px)"
+									srcset="img/goods/1-tablet-@1x.jpg 1x, img/goods/1-tablet-@2x.jpg 2x">
+							<img class="goods__img" src="img/goods/1-mobile-@1x.jpg"
+								 srcset="img/goods/1-mobile-@2x.jpg 2x"
+								 width="50" height="50"
+								 alt="Картинка товара">
+						</picture>
+						<div class="goods__box">
+							<a href="#" class="goods__link">
+								<h3 class="goods__title">Пюре Gerber</h3>
+							</a>
+							<span class="goods__price">90,40 Р</span>
+						</div>
+						<div class="goods__buttons">
+							<button type="button" class="btn-like">
+								<svg class="goods__img-like img-like">
+									<use xlink:href="img/svg/symbol/sprite.svg#like"></use>
+								</svg>
+							</button>
+							<button type="button" class="btn-cross"></button>
+						</div>
+						<div class="quantity">
+							<label for="num" class="quantity__text"></label>
+							<input id="num" class="quantity__input" type="number" value="6">
+							<button type="button" class="btn-quantity btn-quantity_down"></button>
+							<button type="button" class="btn-quantity btn-quantity_up"></button>
+						</div>
+						<span class="goods__price goods__price_total">680,20 Р</span>
+					</li>
+<!--				<li class="goods__item">-->
+<!--					<picture>-->
+<!--						<source type="image/webp" media="(min-width: 768px)"-->
+<!--								srcset="img/goods/2-tablet-@1x.webp 1x, img/goods/2-tablet-@2x.webp 2x">-->
+<!--						<source type="image/webp"-->
+<!--								srcset="img/goods/2-mobile-@1x.webp 1x, img/goods/2-mobile-@2x.webp 2x">-->
+<!--						<source media="(min-width: 768px)"-->
+<!--								srcset="img/goods/2-tablet-@1x.jpg 1x, img/goods/2-tablet-@2x.jpg 2x">-->
+<!--						<img class="goods__img" src="img/goods/2-mobile-@1x.jpg"-->
+<!--							 srcset="img/goods/1-mobile-@2x.jpg 2x"-->
+<!--							 width="50" height="50"-->
+<!--							 alt="Картинка товара">-->
+<!--					</picture>-->
+<!--					<div class="goods__box">-->
+<!--						<h1 class="__title">Футболка для девочки (Лошадка)</h1>-->
+<!--						<span class="goods__price">890,40 Р</span>-->
+<!--						<div class="goods__inner"></div>-->
+<!--					</div>-->
+<!--				</li>-->
+<!--				<li class="goods__item">-->
+<!--					<picture>-->
+<!--						<source type="image/webp" media="(min-width: 768px)"-->
+<!--								srcset="img/goods/3-tablet-@1x.webp 1x, img/goods/3-tablet-@2x.webp 2x">-->
+<!--						<source type="image/webp"-->
+<!--								srcset="img/goods/3-mobile-@1x.webp 1x, img/goods/3-mobile-@2x.webp 2x">-->
+<!--						<source media="(min-width: 768px)"-->
+<!--								srcset="img/goods/3-tablet-@1x.jpg 1x, img/goods/3-tablet-@2x.jpg 2x">-->
+<!--						<img class="goods__img" src="img/goods/3-mobile-@1x.jpg"-->
+<!--							 srcset="img/goods/3-mobile-@2x.jpg 2x"-->
+<!--							 width="50" height="50"-->
+<!--							 alt="Картинка товара">-->
+<!--					</picture>-->
+<!--					<div class="goods__box">-->
+<!--						<h1 class="__title">Туфли Betsy</h1>-->
+<!--						<span class="goods__price">890,40 Р</span>-->
+<!--						<div class="goods__inner"></div>-->
+<!--					</div>-->
+<!--				</li>-->
+				</ul>
+			</div>
+		</section>
 	</main>
 	<footer class="footer"></footer>
 </body>
