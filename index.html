@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-	<header class="header">
+	<header class="header container">
 		<nav class="nav">
 			<input class="nav__check" type="checkbox" id="toggle">
 			<label class="nav__btn" for="toggle">
@@ -74,7 +74,7 @@
 	<main class="container">
 		<section class="basket">
 			<h1 class="basket__title">Корзина</h1>
-			<div class="goods">
+			<div class="goods radius">
 				<ul class="goods__list">
 					<li class="goods__item">
 						<picture>
@@ -91,65 +91,111 @@
 						</picture>
 						<div class="goods__box">
 							<a href="#" class="goods__link">
-								<h3 class="goods__title">Пюре Gerber</h3>
+								<h3 class="goods__title gradient">Пюре Gerber</h3>
 							</a>
 							<span class="goods__price">90,40 Р</span>
 						</div>
 						<div class="goods__buttons">
-							<button type="button" class="btn-like">
-								<svg class="goods__img-like img-like">
+							<button type="button" class="goods__btn-like btn-like hidden">
+								<svg class="img-not-like">
+									<use xlink:href="img/svg/symbol/sprite.svg#not-like"></use>
+								</svg>
+							</button>
+							<button type="button" class="btn-stick btn-stick_delete"></button>
+						</div>
+						<div class="goods__wrap">
+							<div class="quantity">
+								<label for="num" class="quantity__text"></label>
+								<input id="num" class="quantity__input" type="number" value="6">
+								<button type="button" class="goods__btn_minus btn-stick btn-stick_minus"></button>
+								<button type="button" class="goods__btn_plus btn-stick btn-stick_plus"></button>
+							</div>
+							<span class="goods__price goods__price_total">680,20 Р</span>
+						</div>
+					</li>
+					<li class="goods__item">
+						<picture>
+							<source type="image/webp" media="(min-width: 768px)"
+									srcset="img/goods/2-tablet-@1x.webp 1x, img/goods/2-tablet-@2x.webp 2x">
+							<source type="image/webp"
+									srcset="img/goods/2-mobile-@1x.webp 1x, img/goods/2-mobile-@2x.webp 2x">
+							<source media="(min-width: 768px)"
+									srcset="img/goods/2-tablet-@1x.jpg 1x, img/goods/2-tablet-@2x.jpg 2x">
+							<img class="goods__img" src="img/goods/2-mobile-@1x.jpg"
+								 srcset="img/goods/2-mobile-@2x.jpg 2x"
+								 width="50" height="50"
+								 alt="Картинка товара">
+						</picture>
+						<div class="goods__box">
+							<a href="#" class="goods__link">
+								<h3 class="goods__title gradient">Футболка для девочки (Лошадка)</h3>
+							</a>
+							<span class="goods__price">890,40 Р</span>
+						</div>
+						<div class="goods__buttons">
+							<button type="button" class="goods__btn-like  btn-like">
+								<svg class="img-like img-like_color">
 									<use xlink:href="img/svg/symbol/sprite.svg#like"></use>
 								</svg>
 							</button>
-							<button type="button" class="btn-cross"></button>
+							<button type="button" class="btn-stick btn-stick_delete"></button>
 						</div>
-						<div class="quantity">
-							<label for="num" class="quantity__text"></label>
-							<input id="num" class="quantity__input" type="number" value="6">
-							<button type="button" class="btn-quantity btn-quantity_down"></button>
-							<button type="button" class="btn-quantity btn-quantity_up"></button>
+						<div class="goods__wrap">
+							<div class="quantity">
+								<label for="num-2" class="quantity__text"></label>
+								<input id="num-2" class="quantity__input" type="number" value="2">
+								<button type="button" class="goods__btn_minus btn-stick btn-stick_minus"></button>
+								<button type="button" class="goods__btn_plus btn-stick btn-stick_plus"></button>
+							</div>
+							<span class="goods__price goods__price_total">1980,80 Р</span>
 						</div>
-						<span class="goods__price goods__price_total">680,20 Р</span>
 					</li>
-<!--				<li class="goods__item">-->
-<!--					<picture>-->
-<!--						<source type="image/webp" media="(min-width: 768px)"-->
-<!--								srcset="img/goods/2-tablet-@1x.webp 1x, img/goods/2-tablet-@2x.webp 2x">-->
-<!--						<source type="image/webp"-->
-<!--								srcset="img/goods/2-mobile-@1x.webp 1x, img/goods/2-mobile-@2x.webp 2x">-->
-<!--						<source media="(min-width: 768px)"-->
-<!--								srcset="img/goods/2-tablet-@1x.jpg 1x, img/goods/2-tablet-@2x.jpg 2x">-->
-<!--						<img class="goods__img" src="img/goods/2-mobile-@1x.jpg"-->
-<!--							 srcset="img/goods/1-mobile-@2x.jpg 2x"-->
-<!--							 width="50" height="50"-->
-<!--							 alt="Картинка товара">-->
-<!--					</picture>-->
-<!--					<div class="goods__box">-->
-<!--						<h1 class="__title">Футболка для девочки (Лошадка)</h1>-->
-<!--						<span class="goods__price">890,40 Р</span>-->
-<!--						<div class="goods__inner"></div>-->
-<!--					</div>-->
-<!--				</li>-->
-<!--				<li class="goods__item">-->
-<!--					<picture>-->
-<!--						<source type="image/webp" media="(min-width: 768px)"-->
-<!--								srcset="img/goods/3-tablet-@1x.webp 1x, img/goods/3-tablet-@2x.webp 2x">-->
-<!--						<source type="image/webp"-->
-<!--								srcset="img/goods/3-mobile-@1x.webp 1x, img/goods/3-mobile-@2x.webp 2x">-->
-<!--						<source media="(min-width: 768px)"-->
-<!--								srcset="img/goods/3-tablet-@1x.jpg 1x, img/goods/3-tablet-@2x.jpg 2x">-->
-<!--						<img class="goods__img" src="img/goods/3-mobile-@1x.jpg"-->
-<!--							 srcset="img/goods/3-mobile-@2x.jpg 2x"-->
-<!--							 width="50" height="50"-->
-<!--							 alt="Картинка товара">-->
-<!--					</picture>-->
-<!--					<div class="goods__box">-->
-<!--						<h1 class="__title">Туфли Betsy</h1>-->
-<!--						<span class="goods__price">890,40 Р</span>-->
-<!--						<div class="goods__inner"></div>-->
-<!--					</div>-->
-<!--				</li>-->
+					<li class="goods__item">
+						<picture>
+							<source type="image/webp" media="(min-width: 768px)"
+									srcset="img/goods/3-tablet-@1x.webp 1x, img/goods/3-tablet-@2x.webp 2x">
+							<source type="image/webp"
+									srcset="img/goods/3-mobile-@1x.webp 1x, img/goods/3-mobile-@2x.webp 2x">
+							<source media="(min-width: 768px)"
+									srcset="img/goods/3-tablet-@1x.jpg 1x, img/goods/3-tablet-@2x.jpg 2x">
+							<img class="goods__img" src="img/goods/3-mobile-@1x.jpg"
+								 srcset="img/goods/3-mobile-@2x.jpg 2x"
+								 width="50" height="50"
+								 alt="Картинка товара">
+						</picture>
+						<div class="goods__box">
+							<a href="#" class="goods__link ">
+								<h3 class="goods__title gradient">Туфли Betsy</h3>
+							</a>
+							<span class="goods__price">890,40 Р</span>
+						</div>
+						<div class="goods__buttons">
+							<button type="button" class="btn-like hidden">
+								<svg class="img-not-like hidden">
+									<use xlink:href="img/svg/symbol/sprite.svg#not-like"></use>
+								</svg>
+							</button>
+							<button type="button" class="btn-stick btn-stick_delete"></button>
+						</div>
+						<div class="goods__wrap">
+							<div class="quantity">
+								<label for="num-3" class="quantity__text"></label>
+								<input id="num-3" class="quantity__input" type="number" value="2">
+								<button type="button" class="goods__btn_minus btn-stick btn-stick_minus"></button>
+								<button type="button" class="goods__btn_plus btn-stick btn-stick_plus"></button>
+							</div>
+							<span class="goods__price goods__price_total">1980,80 Р</span>
+						</div>
+					</li>
 				</ul>
+				<section class="promo basket__item">
+					<span class="basket__text">Промокод</span>
+					<button type="button" class="basket__btn btn-stick btn-stick_plus"></button>
+				</section>
+				<section class="basket__item">
+					<span class="basket__text">10 товаров на сумму</span>
+					<span class="basket__total-price">1260 Р</span>
+				</section>
 			</div>
 		</section>
 	</main>
