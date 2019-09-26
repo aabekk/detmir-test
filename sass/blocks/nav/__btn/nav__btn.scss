@@ -1,8 +1,9 @@
 $icon-width: 22px;
+$anim-time: .4s;
 
 .nav__btn {
   display: block;
   width: $icon-width;
   height: 20px;
-  transition: .4s;
+  transition: transform $anim-time;
 }
