@@ -1,5 +1,6 @@
 $icon-back: #fff;
 $icon-width: 22px;
+$anim-time: .4s;
 
 .nav__icon {
   display: block;
@@ -7,7 +8,7 @@ $icon-width: 22px;
   border-radius: 24px;
   background: $icon-back;
   height: 3px;
-  transition: .4s;
+  transition: transform $anim-time;
   top: 8px;
 
   &::before,
@@ -19,7 +20,7 @@ $icon-width: 22px;
     background: $icon-back;
     width: 100%;
     height: 3px;
-    transition: .4s;
+    transition: transform $anim-time;
   }
   &::before {
     top: -7px;
