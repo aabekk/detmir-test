@@ -3,4 +3,10 @@ $fill: #fff;
   height: 17px;
   width: 100%;
   fill: $fill;
+  margin: 0 auto;
+  @include media("tablet") {
+    width: 146px;
+    height: 23px;
+
+  }
 }

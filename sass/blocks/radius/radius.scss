@@ -1,3 +1,7 @@
+$back-color: #fff;
+
 .radius {
   border-radius: 10px;
+  background-color: $back-color;
+  box-shadow: 0 2px 4px rgba(9, 57, 116, 0.2);
 }

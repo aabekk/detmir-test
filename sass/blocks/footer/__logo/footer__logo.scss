@@ -1,0 +1,12 @@
+.footer__logo {
+  margin: 0 auto 29px;
+  width: 153px;
+  &::before {
+    content: '';
+  }
+  @include media("tablet") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

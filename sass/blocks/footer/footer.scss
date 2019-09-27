@@ -1,0 +1,8 @@
+$color: #0b5db0;
+
+.footer {
+  padding-bottom: 44px;
+  &::before {
+    top: -48px;
+  }
+}

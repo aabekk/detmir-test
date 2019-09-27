@@ -1,0 +1,9 @@
+.gradient_input {
+  &::before {
+    width: 16px;
+    bottom: 14px;
+    right: 10px;
+    height: 20px;
+    background-image: linear-gradient(to right, rgba(236, 241, 248, 0) 0%, #ecf1f8 100%);
+  }
+}

@@ -1,0 +1,9 @@
+.goods__btn-like_off {
+  visibility: hidden;
+  @include media("tablet") {
+    visibility: visible;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+}

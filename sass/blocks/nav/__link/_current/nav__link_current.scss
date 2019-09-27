@@ -1,0 +1,7 @@
+$back-color: #0b5fb3;
+
+.nav__link_current {
+  @include media("tablet") {
+    background-color: $back-color;
+  }
+}

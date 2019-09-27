@@ -1,6 +1,8 @@
 .nav__check {
   display: none;
-
+  @include media("tablet") {
+    display: none;
+  }
   &:checked ~ {
     .nav {
       align-items: flex-start;

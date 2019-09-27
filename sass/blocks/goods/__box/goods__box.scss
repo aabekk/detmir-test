@@ -2,4 +2,7 @@
   width: 57%;
   margin-left: 10px;
   margin-top: 6px;
+  @include media("tablet"){
+    width: auto;
+  }
 }

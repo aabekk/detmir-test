@@ -1,0 +1,14 @@
+$back-color: #0b5db0;
+$height: 2px;
+
+.border {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    height: $height;
+    width: calc(100% - 3% * 2);
+    border-radius: $height;
+    background-color: $back-color;
+  }
+}

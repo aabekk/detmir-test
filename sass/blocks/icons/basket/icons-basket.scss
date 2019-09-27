@@ -1,0 +1,6 @@
+.icons-basket {
+  @include media("tablet") {
+    width: 25px;
+    height: 22px;
+  }
+}

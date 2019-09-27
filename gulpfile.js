@@ -15,7 +15,8 @@ const { src, dest, parallel, watch } = require( 'gulp' ),
     replace = require('gulp-replace'),
     API_KEY_TINIFY = env('../api/.env').tinify,
     views= ['index.html'],
-    styles = ['sass/mixins/*.scss', 'sass/**/*.scss'];
+    styles = ['sass/mixins/*.scss', 'sass/**/*.scss'],
+    images = ['img/**/*.{jpg, png}'];
 
 function css() {
     return src( styles )
@@ -41,11 +42,11 @@ function html() {
 function img() {
     return src(images, {nodir: true})
         .pipe(tinify(API_KEY_TINIFY))
-        .pipe(dest('dist/__img/'))
+        .pipe(dest('dist/img/'))
 }
 
 function svg() {
-    return src('img/svg/**/*.svg')
+    return src('img/svg/inline/**/*.svg')
     // minify svg
         .pipe(svgmin({
             js2svg: {
@@ -78,8 +79,12 @@ function svg() {
 }
 
 function build() {
-    return src('fonts/**/*')
-        .pipe(dest('dist/fonts/'))
+     src('fonts/**/*')
+        .pipe(dest('dist/fonts/'));
+    src('img/**/*.webp')
+        .pipe(dest('dist/img/'));
+    src('img/svg/*.svg')
+        .pipe(dest('dist/img/svg/'));
 }
 
 function watcher (cb) {

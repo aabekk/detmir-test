@@ -1,0 +1,10 @@
+.logo__cubes {
+  width: 71%;
+  height: 14px;
+  margin: 0 auto 5%;
+  @include media("tablet") {
+    width: 88px;
+    height: 20px;
+    margin-bottom: 7px;
+  }
+}

@@ -1,5 +1,19 @@
 $link-color: #fff;
+$hover-back-color: #0b5fb3;
 .nav__link {
   color: $link-color;
   display: block;
+  @include media("tablet") {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    &:hover, &:focus {
+      @include media("desktop") {
+        background-color: $hover-back-color;
+      }
+    }
+  }
 }

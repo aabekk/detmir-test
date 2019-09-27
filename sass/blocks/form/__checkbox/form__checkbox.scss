@@ -1,0 +1,27 @@
+$pseudo-border-color: #cad6e4;
+$pseudo-border: 1px solid $pseudo-border-color;
+
+
+.form__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  + .form__checkbox-text:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    border: $pseudo-border;
+  }
+  &:checked + .form__checkbox-text::before {
+    background: url("../img/svg/tick.svg");
+  }
+  &:focus + .form__checkbox-text:before {
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
+  }
+}
+
+

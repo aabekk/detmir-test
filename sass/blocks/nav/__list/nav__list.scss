@@ -4,4 +4,11 @@
   overflow: hidden;
   margin: 0;
   height: 22px;
+  @include media("tablet") {
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 165px;
+  }
 }

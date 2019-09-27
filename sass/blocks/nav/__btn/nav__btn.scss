@@ -1,9 +1,10 @@
 $icon-width: 22px;
-$anim-time: .4s;
 
 .nav__btn {
   display: block;
   width: $icon-width;
   height: 20px;
-  transition: transform $anim-time;
+  @include media("tablet") {
+    display: none;
+  }
 }

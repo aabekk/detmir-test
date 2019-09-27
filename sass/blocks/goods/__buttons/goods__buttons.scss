@@ -5,4 +5,10 @@
   margin-top: 3px;
   position: relative;
   margin-left: auto;
+  @include media("tablet"){
+    order: -1;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
