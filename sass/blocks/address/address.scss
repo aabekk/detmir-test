@@ -1,0 +1,7 @@
+.address {
+  display: none;
+  @include media("tablet") {
+    display: flex;
+    align-items: center;
+  }
+}
